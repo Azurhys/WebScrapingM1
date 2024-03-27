@@ -4,7 +4,7 @@ Ce projet consiste à scraper les données des crypto-monnaies à partir d'un si
 ## Contenu du Projet
 Le projet comprend les fichiers suivants :
 
-**Crypto_Scrap.py:** Ce fichier contient le code Python pour scraper les données des crypto-monnaies à partir d'un site web, les filtrer et les insérer dans une base de données MySQL.
+**crypto_scrap.py:** Ce fichier contient le code Python pour scraper les données des crypto-monnaies à partir d'un site web, les filtrer et les insérer dans une base de données MySQL.
 
 **README.md:** Ce fichier contient la documentation du projet, expliquant comment utiliser le code et fournissant des informations sur son fonctionnement.
 

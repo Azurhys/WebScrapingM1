@@ -25,8 +25,14 @@ Assurez-vous d'avoir un serveur MySQL en cours d'exécution. Vous pouvez install
 Exécutez le script scrap_cryptos.py pour scraper les données des crypto-monnaies, les filtrer et les insérer dans la base de données MySQL. Assurez-vous de modifier les informations de connexion MySQL dans le script selon vos paramètres. Ce script tracera aussi la corrélation entre la capitalisation boursière et le prix du token.
 
 ```
-python Crypto_Scrap.py
+python crypto_scrap.py <options>
 ```
+
+### Options
+
+--v (verbose) : Affiche les datas scrapées avant la mise en BDD
+
+--url <url> : Permet de changer l'url de requête (déconseillé de modifier sauf si changement sur CoinMarketCap)
 
 Vous pouvez également explorer les autres parties du code pour personnaliser ou étendre les fonctionnalités du projet selon vos besoins.
 

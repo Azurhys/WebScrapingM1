@@ -1,4 +1,4 @@
-### Projet de Scraping et Analyse de Données de Crypto-Monnaies
+# Projet de Scraping et Analyse de Données de Crypto-Monnaies
 Ce projet consiste à scraper les données des crypto-monnaies à partir d'un site web et à les analyser. Le code est écrit en Python et utilise les bibliothèques BeautifulSoup pour le scraping web et matplotlib pour l'analyse des données.
 
 ## Contenu du Projet
@@ -15,14 +15,18 @@ Assurez-vous d'avoir Python installé sur votre système. Vous pouvez le téléc
 
 Installez les bibliothèques requises en exécutant la commande suivante dans votre terminal :
 
-``` pip install bs4 matplotlib mysql-connector-python ```
+```
+pip install bs4 matplotlib mysql-connector-python
+```
 
 Assurez-vous d'avoir un serveur MySQL en cours d'exécution. Vous pouvez installer MySQL depuis MySQL Downloads.
 
 ## Utilisation
 Exécutez le script scrap_cryptos.py pour scraper les données des crypto-monnaies, les filtrer et les insérer dans la base de données MySQL. Assurez-vous de modifier les informations de connexion MySQL dans le script selon vos paramètres. Ce script tracera aussi la corrélation entre la capitalisation boursière et le prix du token.
 
-``` python scrap_cryptos.py ```
+```
+python Crypto_Scrap.py
+```
 
 Vous pouvez également explorer les autres parties du code pour personnaliser ou étendre les fonctionnalités du projet selon vos besoins.
 

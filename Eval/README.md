@@ -32,7 +32,7 @@ python crypto_scrap.py <options>
 
 --v (verbose) : Affiche les datas scrapées avant la mise en BDD
 
---url <url> : Permet de changer l'url de requête (déconseillé de modifier sauf si changement sur CoinMarketCap)
+--url url : Permet de changer l'url de requête (déconseillé de modifier sauf si changement sur CoinMarketCap)
 
 Vous pouvez également explorer les autres parties du code pour personnaliser ou étendre les fonctionnalités du projet selon vos besoins.
 

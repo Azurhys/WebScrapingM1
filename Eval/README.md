@@ -39,7 +39,7 @@ docker-compose run
 
 -e VERBOSE=true app : Affiche les datas scrapées avant la mise en BDD (commande pour docker)
 
---url url : Permet de changer l'url de requête (déconseillé de modifier sauf si changement sur CoinMarketCap)
+-e URL="Votre_URL" app : Permet de changer l'url de requête (déconseillé de modifier sauf si changement sur CoinMarketCap)
 
 Vous pouvez également explorer les autres parties du code pour personnaliser ou étendre les fonctionnalités du projet selon vos besoins.
 

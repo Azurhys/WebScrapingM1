@@ -9,7 +9,7 @@ Le projet comprend les fichiers suivants :
 **README.md:** Ce fichier contient la documentation du projet, expliquant comment utiliser le code et fournissant des informations sur son fonctionnement.
 
 ## Installation
-Pour exécuter ce projet, vous aurez besoin d'installer Python ainsi que les bibliothèques BeautifulSoup et matplotlib. Vous aurez également besoin d'un serveur MySQL pour stocker les données.
+Pour exécuter ce projet, vous aurez besoin d'installer Python ainsi que Docker. Vous aurez également besoin d'un serveur MySQL pour stocker les données si vous le faites en local.
 
 Assurez-vous d'avoir Python installé sur votre système. Vous pouvez le télécharger depuis le site officiel de Python.
 

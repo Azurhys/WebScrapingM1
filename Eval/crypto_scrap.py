@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 import mysql.connector
 import matplotlib.pyplot as plt
 import numpy as np
+import subprocess
+from datetime import datetime
 
 class CryptoScraper:
     def __init__(self, url):
@@ -49,9 +51,9 @@ class CryptoScraper:
 
     def save_to_database(self, verbose=False):
         conn = mysql.connector.connect(
-            host="localhost",
+            host="db",
             user="root",
-            password="",
+            password="example",
             database="scrap"
         )
         cursor = conn.cursor()
@@ -86,15 +88,19 @@ class CryptoScraper:
 
         ranks = np.arange(1, total_elements + 1)
         prices_sorted = sorted(prices, reverse=True)  
+        now = datetime.now()
+        date_time = now.strftime("%Y-%m-%d_%H-%M-%S")
+        file_name = f"graph_{date_time}.png"
 
         plt.figure(figsize=(10, 6))
         plt.scatter(ranks, prices_sorted, color='blue', alpha=0.5)
-        plt.title('Relation entre le rang et le prix du jeton')
+        plt.title(f'Relation entre le rang et le prix du jeton le {date_time}')
         plt.xlabel('Rang (capitalisation boursière)')
         plt.ylabel('Prix du jeton ($)')
         plt.xlim(1, total_elements + 1)
         plt.yscale('log')
         plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+        plt.savefig(f'/app/graphs/{file_name}')
         plt.show()
 
 def main():

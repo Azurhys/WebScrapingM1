@@ -16,16 +16,23 @@ Assurez-vous d'avoir Python installé sur votre système. Vous pouvez le téléc
 Installez les bibliothèques requises en exécutant la commande suivante dans votre terminal :
 
 ```
-pip install bs4 matplotlib mysql-connector-python
+pip install bs4 matplotlib mysql-connector-python requests
 ```
 
 Assurez-vous d'avoir un serveur MySQL en cours d'exécution. Vous pouvez installer MySQL depuis MySQL Downloads.
 
 ## Utilisation
-Exécutez le script scrap_cryptos.py pour scraper les données des crypto-monnaies, les filtrer et les insérer dans la base de données MySQL. Assurez-vous de modifier les informations de connexion MySQL dans le script selon vos paramètres. Ce script tracera aussi la corrélation entre la capitalisation boursière et le prix du token.
+
+Lancer la commande suivante avec docker en fonctionnement sur votre poste si vous devez build le fichier py : 
 
 ```
-python crypto_scrap.py <options>
+docker-compose up --build
+```
+
+Sinon :
+
+```
+docker-compose up 
 ```
 
 ### Options

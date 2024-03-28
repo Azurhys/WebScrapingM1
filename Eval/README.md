@@ -26,18 +26,18 @@ Assurez-vous d'avoir un serveur MySQL en cours d'exécution. Vous pouvez install
 Lancer la commande suivante avec docker en fonctionnement sur votre poste si vous devez build le fichier py : 
 
 ```
-docker-compose up --build
+docker-compose up --build 
 ```
 
 Sinon :
 
 ```
-docker-compose up 
+docker-compose run
 ```
 
 ### Options
 
---v (verbose) : Affiche les datas scrapées avant la mise en BDD
+-e VERBOSE=true app : Affiche les datas scrapées avant la mise en BDD (commande pour docker)
 
 --url url : Permet de changer l'url de requête (déconseillé de modifier sauf si changement sur CoinMarketCap)
 

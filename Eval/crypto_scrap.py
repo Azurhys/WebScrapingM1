@@ -4,12 +4,13 @@ from bs4 import BeautifulSoup
 import mysql.connector
 import matplotlib.pyplot as plt
 import numpy as np
-import subprocess
 from datetime import datetime
+import os
 
 class CryptoScraper:
     def __init__(self, url):
-        self.url = url
+        self.url = os.getenv("URL", "https://coinmarketcap.com/fr/")
+        self.verbose = os.getenv("VERBOSE", False)
 
     def scrape_data(self, verbose=False):
         response = requests.get(self.url)
@@ -37,7 +38,7 @@ class CryptoScraper:
                 self.filtered_elements.append((crypto_name, price, crypto_market))
                 seen_markets.add(crypto_market)
 
-        if verbose:
+        if self.verbose:
             for crypto_name, price, crypto_market in self.filtered_elements:
                 print(crypto_name, price, crypto_market)
             print("Data scraped successfully.")
@@ -70,7 +71,7 @@ class CryptoScraper:
             cursor.execute('INSERT INTO crypto_info (name, price, market) VALUES (%s, %s, %s)', element)
         conn.commit()
         conn.close()
-        if verbose:
+        if self.verbose:
             print("Data saved to database successfully.")
 
     def analyze_data(self):
